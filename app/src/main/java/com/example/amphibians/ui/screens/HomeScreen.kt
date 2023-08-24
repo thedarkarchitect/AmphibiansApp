@@ -58,8 +58,8 @@ fun AmphibianCard(amphibian : AmphibianDetails , modifier: Modifier = Modifier){
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally){
             Text(
-                text = stringResource(id = R.string.amphibian_title),
-                fontSize = 30.sp,
+                text = stringResource(id = R.string.amphibian_title, amphibian.name, amphibian.type),
+                fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Start,
                 modifier = modifier

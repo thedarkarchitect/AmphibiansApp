@@ -33,7 +33,7 @@ class AmphibianViewModel(private val amphibianDetailsRepository: AmphibianDetail
         viewModelScope.launch {
             amphibianUiState = AmphibianUiState.Loading
             amphibianUiState = try {
-                AmphibianUiState.Success(amphibianDetailsRepository.getAmphibians())
+                AmphibianUiState.Success(amphibianDetailsRepository.getAmphibianDetails())
             } catch (e: IOException){
                 AmphibianUiState.Error
             }catch (e: HttpException){
